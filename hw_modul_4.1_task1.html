@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hw_modul_4.1_task1</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.circle {
+			border: 2px solid rgba(10, 143, 143, 1);
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			/* rotate: 90deg; */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+
+		.point {
+			width: 13px;
+			height: 13px;
+			background-color: rgba(10, 143, 143, 1);
+			border-radius: 50%;
+			top: 50%;
+			position: absolute;
+			left: 50%;
+			/* rotate: 180deg; */
+			transform-origin: 0 0;
+		}
+
+		.hours {
+			border: rgba(10, 143, 143, 1) solid 2px;
+			top: 50%;
+			left: 50%;
+			width: 50%;
+			position: absolute;
+			transform-origin: 0 50%;
+			rotate: 270deg;
+		}
+
+		.minutes {
+			border: rgba(10, 143, 143, 1) solid 2px;
+			top: 50%;
+			left: 50%;
+			width: 40%;
+			position: absolute;
+			transform-origin: 0 50%;
+			rotate: 270deg;
+
+		}
+
+		.seconds {
+			border: rgba(10, 143, 143, 1) solid 2px;
+			top: 50%;
+			left: 50%;
+			width: 30%;
+			position: absolute;
+			transform-origin: 0 50%;
+			rotate: 270deg;
+		}
+
+		.hours {
+			animation: rotate 43200s infinite linear;
+		}
+
+		.minutes {
+			animation: rotate 3600s infinite linear;
+		}
+
+		.seconds {
+			animation: rotate 60s infinite steps(60);
+		}
+
+		@keyframes rotate {
+			100% {
+				transform: rotateZ(360deg);
+
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="circle">
+		<!-- <div class="point"></div> -->
+		<div class="hours"></div>
+		<div class="minutes"></div>
+		<div class="seconds"></div>
+
+	</div>
+</body>
+
+</html>
